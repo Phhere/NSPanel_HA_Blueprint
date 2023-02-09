@@ -2002,27 +2002,27 @@ trace:
 
 trigger_variables:
   nspanel_name_trigger: !input "nspanel_name"
-  last_click: "sensor.{{ nspanel_name_trigger }}_last_click"
-  last_click_lightsettings: "sensor.{{ nspanel_name_trigger }}_last_click_lightsettings"
-  last_click_coversettings: "sensor.{{ nspanel_name_trigger }}_last_click_coversettings"
-  last_click_climatesettings: "sensor.{{ nspanel_name_trigger }}_last_click_climatesettings"
-  left_button: "binary_sensor.{{ nspanel_name_trigger }}_left_button"
-  right_button: "binary_sensor.{{ nspanel_name_trigger }}_right_button"
-  weather_forcast_button: "binary_sensor.{{ nspanel_name_trigger }}_weather_forcast"
-  nextion_inited_trigger: "switch.{{ nspanel_name_trigger }}_nextion_inited"
+  last_click: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_last_click"
+  last_click_lightsettings: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_last_click_lightsettings"
+  last_click_coversettings: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_last_click_coversettings"
+  last_click_climatesettings: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_last_click_climatesettings"
+  left_button: "binary_sensor.{{ nspanel_name_trigger | replace('-','_') }}_left_button"
+  right_button: "binary_sensor.{{ nspanel_name_trigger | replace('-','_') }}_right_button"
+  weather_forcast_button: "binary_sensor.{{ nspanel_name_trigger | replace('-','_') }}_weather_forcast"
+  nextion_inited_trigger: "switch.{{ nspanel_name_trigger | replace('-','_') }}_nextion_inited"
   # current_page: "sensor.{{ nspanel_name_trigger }}_current_page"
-  current_page: "sensor.{{ nspanel_name_trigger }}_currentpage"
+  current_page: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_currentpage"
   hotwatercharge: !input "hotwatercharge"
   heatingsystemflame: !input "heatingsystemflame"
-  display_target_temperature: "sensor.{{ nspanel_name_trigger }}_display_target_temperature"
-  relay01_entity: "switch.{{ nspanel_name_trigger }}_relay_1"
-  relay02_entity: "switch.{{ nspanel_name_trigger }}_relay_2"
-  nspaneltemp: "sensor.{{ nspanel_name_trigger }}_temperature"
+  display_target_temperature: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_display_target_temperature"
+  relay01_entity: "switch.{{ nspanel_name_trigger | replace('-','_') }}_relay_1"
+  relay02_entity: "switch.{{ nspanel_name_trigger | replace('-','_') }}_relay_2"
+  nspaneltemp: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_temperature"
   
   ##### notification Trigger #####
-  notification_unread: "switch.{{ nspanel_name_trigger }}_notification_unread"
-  notification_text: "sensor.{{ nspanel_name_trigger }}_notification_text"
-  notification_label: "sensor.{{ nspanel_name_trigger }}_notification_label"
+  notification_unread: "switch.{{ nspanel_name_trigger | replace('-','_') }}_notification_unread"
+  notification_text: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_notification_text"
+  notification_label: "sensor.{{ nspanel_name_trigger | replace('-','_') }}_notification_label"
 
   ##### WEATHER Trigger #####
   weather: !input "weather"
@@ -2059,7 +2059,7 @@ variables:
   climate_optimistic: !input "climate_optimistic"
 
   ##### TFT UPLOAD #####
-  tft_upload:  "esphome.{{ nspanel_name }}_upload_tft"
+  tft_upload:  "esphome.{{ nspanel_name | replace('-','_') }}_upload_tft"
   tft_path: !input "tft_path"
 
   ##### GENERAL ENTITYS #####
