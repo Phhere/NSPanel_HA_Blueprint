@@ -2036,19 +2036,19 @@ variables:
   time: "{{ (as_timestamp(now()) | timestamp_custom('%H:%M')) }}"
   language: !input "language"
 
-  notification_sound: "switch.{{ nspanel_name_trigger }}_notification_sound"
-  confirmation_message: "switch.{{ nspanel_name_trigger }}_confirmation_message"
+  notification_sound: "switch.{{ nspanel_name_trigger | replace('-','_') }}_notification_sound"
+  confirmation_message: "switch.{{ nspanel_name_trigger | replace('-','_') }}_confirmation_message"
 
   ##### PUSH TO NEXTION DISPLAY #####
-  command_text_printf: "esphome.{{ nspanel_name }}_send_command_text_printf"
-  command_value: "esphome.{{ nspanel_name }}_send_command_value"
-  command_printf: "esphome.{{ nspanel_name }}_send_command_printf"
-  command_font_color: "esphome.{{ nspanel_name }}_send_command_font_color"
-  command_background_color: "esphome.{{ nspanel_name }}_send_command_background_color"
-  command_thermostat_cycle: "esphome.{{ nspanel_name }}_send_thermostat_cycle_state"
-  command_notification_show: "esphome.{{ nspanel_name }}_notification_show"
-  command_notification_clear: "esphome.{{ nspanel_name }}_notification_clear"
-  command_play_rtttl: "esphome.{{ nspanel_name }}_play_rtttl"
+  command_text_printf: "esphome.{{ nspanel_name | replace('-','_')}}_send_command_text_printf"
+  command_value: "esphome.{{ nspanel_name | replace('-','_') }}_send_command_value"
+  command_printf: "esphome.{{ nspanel_name | replace('-','_') }}_send_command_printf"
+  command_font_color: "esphome.{{ nspanel_name | replace('-','_') }}_send_command_font_color"
+  command_background_color: "esphome.{{ nspanel_name | replace('-','_') }}_send_command_background_color"
+  command_thermostat_cycle: "esphome.{{ nspanel_name | replace('-','_') }}_send_thermostat_cycle_state"
+  command_notification_show: "esphome.{{ nspanel_name | replace('-','_') }}_notification_show"
+  command_notification_clear: "esphome.{{ nspanel_name | replace('-','_') }}_notification_clear"
+  command_play_rtttl: "esphome.{{ nspanel_name | replace('-','_') }}_play_rtttl"
 
   ###### SYNC SETTINGS #####
   delay_boot: !input "delay"
